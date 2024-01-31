@@ -1,5 +1,6 @@
 package Array;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 public class DynamicArray<T> implements Iterable<T>{
@@ -13,7 +14,7 @@ public class DynamicArray<T> implements Iterable<T>{
     }
 
     public DynamicArray(int capacity) {
-        if (capacity < 0) throw new IllegalArgumentException("Capacity can not be negative" + capacity);
+        if (capacity < 0) throw new IllegalArgumentException("Capacity can not be negative " + capacity);
         this.capacity = capacity;
         arr = (T[]) new Object[capacity];
     }

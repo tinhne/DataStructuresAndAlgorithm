@@ -81,7 +81,6 @@ public class SeparateChainingHashTable<K, V> implements HashTableADT<K, V>{
             if (node.getKey().equals(key)) existedNode = node;
         }
 
-
         return false;
     }
 
