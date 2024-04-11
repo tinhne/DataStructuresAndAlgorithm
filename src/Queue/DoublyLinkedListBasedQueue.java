@@ -5,12 +5,12 @@ import LinkedList.DoublyLinkedListADT;
 
 import java.util.Iterator;
 
-public class LinkedListBasedQueue<T> implements QueueADT<T>{
+public class DoublyLinkedListBasedQueue<T> implements QueueADT<T>{
     private final DoublyLinkedListADT<T> linkedList = new DoublyLinkedList<>();
 
-    public LinkedListBasedQueue() {
+    public DoublyLinkedListBasedQueue() {
     }
-    public LinkedListBasedQueue(T firstElement) {
+    public DoublyLinkedListBasedQueue(T firstElement) {
         Enqueue(firstElement);
     }
 

@@ -22,7 +22,7 @@ public class QueueTest {
         long endTime = System.nanoTime();
         System.out.println("Circle array based queue took: " + (endTime - startTime));
 
-        QueueADT linkedListBasedQueue = new LinkedListBasedQueue();
+        QueueADT linkedListBasedQueue = new DoublyLinkedListBasedQueue();
 
         startTime = System.nanoTime();
         for (int i = 0; i < numberOfOperation; i++) {
