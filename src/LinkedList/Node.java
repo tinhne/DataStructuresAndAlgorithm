@@ -10,6 +10,7 @@ class Node<T> {
         this.next = next;
     }
 
+
     public void setDate(T date) {
         this.date = date;
     }
