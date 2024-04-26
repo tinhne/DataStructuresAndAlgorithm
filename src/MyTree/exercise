@@ -1,0 +1,6 @@
+//Câu 1: cho một mảng số nguyên có n phần tử khác nhau từng đôi một và một cây T rỗng. Hãy viết
+//        chương trình thực hiện các công việc sau:
+//        1. Lần lượt lấy từng phần tử trong mảng chèn vào cây T theo thuật toán ChenBST ( tìm kiếm có bổ
+//        sung). ( Vẽ cây T trong quá trình chèn từng phần tử vào cây T)
+//        2. Tìm giá trị lớn nhất và nhỏ nhất trên cây T
+//        3. Dùng cây T để săp xếp các giá trị trên mảng tăng dần

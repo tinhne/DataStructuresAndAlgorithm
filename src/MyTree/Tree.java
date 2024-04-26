@@ -6,19 +6,7 @@ import java.util.Queue;
 import java.util.Stack;
 
 public class Tree {
-    class TNode {
-        int data;
-        TNode ll, rr;
-        TNode(int x) {
-            data = x;
-            ll = rr = null;
-        }
-        TNode(int data, TNode ll, TNode rr) {
-            this.data = data;
-            this.ll = ll;
-            this.rr = rr;
-        }
-    }
+
     TNode root;
     TNode createNode(int data, TNode ll, TNode rr) {
         return new TNode(data, ll, rr);

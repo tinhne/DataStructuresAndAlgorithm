@@ -108,7 +108,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements TreeADT<T>{
             public T next() {
                 if (expectedCount != nodeCount) throw new ConcurrentModificationException();
 
-                Node node = stack.pop();
+                Node<T> node = stack.pop();
 
                 if (node.getRight() != null) stack.push(node.getRight());
                 if (node.getLeft() != null) stack.push(node.getLeft());
@@ -118,12 +118,12 @@ public class BinarySearchTree<T extends Comparable<T>> implements TreeADT<T>{
     }
 
 //    Private
-    private int height(Node node) {
+    private int height(Node<T> node) {
         if (node == null) return 0;
         return 1 + Math.max(height(node.getLeft()), height(node.getRight()));
     }
 
-    private boolean contains(Node node, T elem) {
+    private boolean contains(Node<T> node, T elem) {
         if (node == null) return false;
 
         int result = elem.compareTo((T) node.getDate());
@@ -135,7 +135,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements TreeADT<T>{
         else return true;
     }
 
-    private Node add(Node node, T elem) {
+    private Node<T> add(Node<T> node, T elem) {
         if (node == null) {
             node = new Node(elem, null, null);
         } else {
@@ -145,7 +145,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements TreeADT<T>{
         return node;
     }
 
-    private Node remove(Node node, T elem) {
+    private Node<T> remove(Node<T> node, T elem) {
         int result = elem.compareTo((T) node.getDate());
         if (result > 0) {
             node.setRight(remove(node.getRight(), elem));
@@ -159,14 +159,14 @@ public class BinarySearchTree<T extends Comparable<T>> implements TreeADT<T>{
         return node;
     }
 
-    private T minRight(Node node) {
+    private T minRight(Node<T> node) {
         while (node.getLeft() != null) {
             node = node.getLeft();
         }
         return (T) node.getDate();
     }
 
-    private T maxLeft(Node node) {
+    private T maxLeft(Node<T> node) {
         while (node.getRight()  != null) {
             node = node.getRight();
         }
